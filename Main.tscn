@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cgx53reeqxcm1"]
+
+[ext_resource type="Texture2D" uid="uid://dbkra6ssy577l" path="res://Assets/banner.png" id="1_glv2v"]
+[ext_resource type="Texture2D" uid="uid://dcq75s0qgsfu2" path="res://Assets/start-button.png" id="2_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://ce4crdkqkqpat" path="res://Assets/start-button-hover.png" id="3_r0du0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0du0"]
+atlas = ExtResource("2_uu6xs")
+region = Rect2(280, 192, 1422, 443)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgr22"]
+atlas = ExtResource("2_uu6xs")
+region = Rect2(280, 192, 1422, 443)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trn2v"]
+atlas = ExtResource("3_r0du0")
+region = Rect2(280, 192, 1422, 443)
+
+[node name="main" type="Control" unique_id=745961492]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="banner" type="Sprite2D" parent="." unique_id=313758032]
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(0.5809379, 0.81715)
+texture = ExtResource("1_glv2v")
+
+[node name="start-button" type="TextureButton" parent="." unique_id=609504204]
+layout_mode = 1
+offset_left = 450.0
+offset_top = 470.0
+offset_right = 1872.0
+offset_bottom = 913.0
+scale = Vector2(0.2, 0.2)
+texture_normal = SubResource("AtlasTexture_r0du0")
+texture_pressed = SubResource("AtlasTexture_lgr22")
+texture_hover = SubResource("AtlasTexture_trn2v")
