@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b85jiqbqn06fb" path="res://Assets/Levels/Week-1/1/sky.png" id="1_jlffd"]
 [ext_resource type="Texture2D" uid="uid://c7ws5bdhuksfn" path="res://Assets/Levels/Week-1/1/far-clouds.png" id="2_ilv5j"]
 [ext_resource type="Texture2D" uid="uid://duur6eahnbqb8" path="res://Assets/Levels/Week-1/1/clouds.png" id="3_vj2c8"]
+[ext_resource type="PackedScene" uid="uid://bhpe5nww2vlsg" path="res://Levels/BaseMap.tscn" id="4_vkm1m"]
 
 [node name="root" type="Node2D" unique_id=1292295819]
 
@@ -114,3 +115,5 @@ texture = ExtResource("3_vj2c8")
 position = Vector2(14400, 324)
 scale = Vector2(2, 2.0000002)
 texture = ExtResource("3_vj2c8")
+
+[node name="base-map" parent="." unique_id=1004147632 instance=ExtResource("4_vkm1m")]
