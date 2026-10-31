@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://byw6rghbmmvs" path="res://Assets/Levels/Week-3/6/sky.png" id="1_ay3yg"]
 [ext_resource type="Texture2D" uid="uid://bquvhegw0oe1t" path="res://Assets/Levels/Week-3/6/far-clouds.png" id="2_hui8p"]
+[ext_resource type="Script" uid="uid://cu10660nsm0ha" path="res://Levels/Week-3/lightning_layer.gd" id="3_4r16o"]
 [ext_resource type="Texture2D" uid="uid://bjl4ggdune1ni" path="res://Assets/Lightning/lightning-1.png" id="3_f4kix"]
 [ext_resource type="Texture2D" uid="uid://b4e8ewb2suvv7" path="res://Assets/Lightning/lightning-2.png" id="4_4r16o"]
 [ext_resource type="Texture2D" uid="uid://bfpx3r8f1c8v1" path="res://Assets/Levels/Week-3/6/clouds.png" id="4_ftrfq"]
@@ -12,6 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://daglxnotq0yu1" path="res://Assets/Lightning/lightning-6.png" id="8_2abkq"]
 [ext_resource type="Texture2D" uid="uid://dxx5mf383gbt3" path="res://Assets/Lightning/lightning-7.png" id="9_rw3oc"]
 [ext_resource type="Texture2D" uid="uid://cx2o1cp4dbeqx" path="res://Assets/Lightning/lightning-8.png" id="10_2xwrh"]
+[ext_resource type="Texture2D" uid="uid://b61281y53ih6b" path="res://Assets/Lightning/lightning-drop-1.png" id="12_rw3oc"]
+[ext_resource type="Texture2D" uid="uid://h6fe4dggk8nt" path="res://Assets/Lightning/lightning-drop-2.png" id="13_2xwrh"]
+[ext_resource type="Texture2D" uid="uid://bduho12qrvwhu" path="res://Assets/Lightning/lightning-drop-3.png" id="14_n81sl"]
+[ext_resource type="Texture2D" uid="uid://csfcepuem65vr" path="res://Assets/Lightning/lightning-drop-4.png" id="15_bmbp3"]
+[ext_resource type="Texture2D" uid="uid://bhlmpgc1n8fn5" path="res://Assets/Lightning/lightning-drop-5.png" id="16_w60b5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ob37o"]
 animations = [{
@@ -69,6 +75,29 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_4r16o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_rw3oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2xwrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_n81sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bmbp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_w60b5")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
+
 [node name="root" type="Node2D" unique_id=1292295819]
 
 [node name="sky" type="Parallax2D" parent="." unique_id=406128687]
@@ -114,6 +143,7 @@ texture = ExtResource("2_hui8p")
 
 [node name="lightning-layer" type="Parallax2D" parent="." unique_id=1369003210]
 scroll_scale = Vector2(0, 0)
+script = ExtResource("3_4r16o")
 
 [node name="lightning" type="Node2D" parent="lightning-layer" unique_id=130703678]
 
@@ -175,6 +205,38 @@ frame_progress = 1.0
 position = Vector2(474, 398)
 sprite_frames = SubResource("SpriteFrames_ob37o")
 animation = &"single-1"
+frame_progress = 1.0
+
+[node name="lightning-drop" type="Node2D" parent="lightning-layer" unique_id=2073166041]
+
+[node name="1" type="AnimatedSprite2D" parent="lightning-layer/lightning-drop" unique_id=253901796]
+position = Vector2(249, 393)
+sprite_frames = SubResource("SpriteFrames_4r16o")
+frame = 4
+frame_progress = 1.0
+
+[node name="2" type="AnimatedSprite2D" parent="lightning-layer/lightning-drop" unique_id=1270778150]
+position = Vector2(525, 337)
+sprite_frames = SubResource("SpriteFrames_4r16o")
+frame = 4
+frame_progress = 1.0
+
+[node name="3" type="AnimatedSprite2D" parent="lightning-layer/lightning-drop" unique_id=160324332]
+position = Vector2(791, 468)
+sprite_frames = SubResource("SpriteFrames_4r16o")
+frame = 4
+frame_progress = 1.0
+
+[node name="4" type="AnimatedSprite2D" parent="lightning-layer/lightning-drop" unique_id=818726747]
+position = Vector2(988, 366)
+sprite_frames = SubResource("SpriteFrames_4r16o")
+frame = 4
+frame_progress = 1.0
+
+[node name="5" type="AnimatedSprite2D" parent="lightning-layer/lightning-drop" unique_id=1864727831]
+position = Vector2(678, 316)
+sprite_frames = SubResource("SpriteFrames_4r16o")
+frame = 4
 frame_progress = 1.0
 
 [node name="clouds" type="Parallax2D" parent="." unique_id=1244930317]
