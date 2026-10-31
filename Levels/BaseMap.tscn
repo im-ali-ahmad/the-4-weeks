@@ -1,3 +1,38 @@
 [gd_scene format=3 uid="uid://bhpe5nww2vlsg"]
 
+[sub_resource type="GDScript" id="GDScript_cfhxa"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 2000.0
+
+
+func _physics_process(_delta: float) -> void:
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	direction = Input.get_axis(\"ui_up\", \"ui_down\")
+	if direction:
+		velocity.y = direction * SPEED
+	else:
+		velocity.y = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
+
 [node name="base-map" type="Node2D" unique_id=1004147632]
+
+[node name="debug-body" type="CharacterBody2D" parent="." unique_id=513391861]
+script = SubResource("GDScript_cfhxa")
+
+[node name="camera" type="Camera2D" parent="debug-body" unique_id=1611180187]
+position = Vector2(196, 110)
+limit_left = 0
+limit_top = 0
+limit_right = 28800
+limit_bottom = 648
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
