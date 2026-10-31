@@ -1,3 +1,125 @@
 [gd_scene format=3 uid="uid://52kjwpnh1kq7"]
 
+[ext_resource type="Texture2D" uid="uid://ckwj6i653exju" path="res://Assets/Levels/Week-3/3/sky.png" id="1_lblmf"]
+[ext_resource type="Texture2D" uid="uid://wsct8kw06qg3" path="res://Assets/Levels/Week-3/3/moon.png" id="2_sjn2y"]
+[ext_resource type="Texture2D" uid="uid://l0136ojni1rf" path="res://Assets/Levels/Week-3/3/far-clouds.png" id="3_xqu5d"]
+[ext_resource type="Texture2D" uid="uid://dd5f7a6s26iw2" path="res://Assets/Levels/Week-3/3/clouds.png" id="5_sjn2y"]
+[ext_resource type="PackedScene" uid="uid://bhpe5nww2vlsg" path="res://Levels/BaseMap.tscn" id="6_u5qot"]
+
 [node name="root" type="Node2D" unique_id=1292295819]
+
+[node name="sky" type="Parallax2D" parent="." unique_id=23863185]
+scroll_scale = Vector2(0, 0)
+
+[node name="screen" type="Sprite2D" parent="sky" unique_id=1948486021]
+position = Vector2(576, 324.00003)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("1_lblmf")
+
+[node name="moon" type="Sprite2D" parent="sky" unique_id=2086624275]
+position = Vector2(576, 324.00003)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("2_sjn2y")
+
+[node name="far-clouds" type="Parallax2D" parent="." unique_id=1980027010]
+scroll_scale = Vector2(0.2, 0.5)
+
+[node name="1" type="Sprite2D" parent="far-clouds" unique_id=567309980]
+position = Vector2(576, 324.00003)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("3_xqu5d")
+
+[node name="2" type="Sprite2D" parent="far-clouds" unique_id=560561443]
+position = Vector2(1728, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("3_xqu5d")
+
+[node name="3" type="Sprite2D" parent="far-clouds" unique_id=480225518]
+position = Vector2(2880, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("3_xqu5d")
+
+[node name="4" type="Sprite2D" parent="far-clouds" unique_id=1397752179]
+position = Vector2(4032, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("3_xqu5d")
+
+[node name="5" type="Sprite2D" parent="far-clouds" unique_id=932898239]
+position = Vector2(5184, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("3_xqu5d")
+
+[node name="6" type="Sprite2D" parent="far-clouds" unique_id=479610300]
+position = Vector2(6336, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("3_xqu5d")
+
+[node name="clouds" type="Parallax2D" parent="." unique_id=1940705393]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="1" type="Sprite2D" parent="clouds" unique_id=279862970]
+position = Vector2(576, 324.00003)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="2" type="Sprite2D" parent="clouds" unique_id=542674314]
+position = Vector2(1728, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="3" type="Sprite2D" parent="clouds" unique_id=1672758118]
+position = Vector2(2880, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="4" type="Sprite2D" parent="clouds" unique_id=822748752]
+position = Vector2(4032, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="5" type="Sprite2D" parent="clouds" unique_id=611613220]
+position = Vector2(5184, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="6" type="Sprite2D" parent="clouds" unique_id=866458615]
+position = Vector2(6336, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="7" type="Sprite2D" parent="clouds" unique_id=579721379]
+position = Vector2(7488, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="8" type="Sprite2D" parent="clouds" unique_id=1576884856]
+position = Vector2(8640, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="9" type="Sprite2D" parent="clouds" unique_id=50788682]
+position = Vector2(9792, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="10" type="Sprite2D" parent="clouds" unique_id=583599355]
+position = Vector2(10944, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="11" type="Sprite2D" parent="clouds" unique_id=171923178]
+position = Vector2(12096, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="12" type="Sprite2D" parent="clouds" unique_id=1756758968]
+position = Vector2(13248, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="13" type="Sprite2D" parent="clouds" unique_id=1831021070]
+position = Vector2(14400, 324)
+scale = Vector2(2, 2.0000002)
+texture = ExtResource("5_sjn2y")
+
+[node name="base-map" parent="." unique_id=1004147632 instance=ExtResource("6_u5qot")]
