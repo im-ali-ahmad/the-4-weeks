@@ -2,8 +2,72 @@
 
 [ext_resource type="Texture2D" uid="uid://byw6rghbmmvs" path="res://Assets/Levels/Week-3/6/sky.png" id="1_ay3yg"]
 [ext_resource type="Texture2D" uid="uid://bquvhegw0oe1t" path="res://Assets/Levels/Week-3/6/far-clouds.png" id="2_hui8p"]
+[ext_resource type="Texture2D" uid="uid://bjl4ggdune1ni" path="res://Assets/Lightning/lightning-1.png" id="3_f4kix"]
+[ext_resource type="Texture2D" uid="uid://b4e8ewb2suvv7" path="res://Assets/Lightning/lightning-2.png" id="4_4r16o"]
 [ext_resource type="Texture2D" uid="uid://bfpx3r8f1c8v1" path="res://Assets/Levels/Week-3/6/clouds.png" id="4_ftrfq"]
+[ext_resource type="Texture2D" uid="uid://epbxh5ypxy8v" path="res://Assets/Lightning/lightning-3.png" id="5_s7lli"]
+[ext_resource type="Texture2D" uid="uid://coiak80ktgrnu" path="res://Assets/Lightning/lightning-4.png" id="6_2exlj"]
 [ext_resource type="PackedScene" uid="uid://bhpe5nww2vlsg" path="res://Levels/BaseMap.tscn" id="6_m72uk"]
+[ext_resource type="Texture2D" uid="uid://dyiayfn3opb1" path="res://Assets/Lightning/lightning-5.png" id="7_7fi8g"]
+[ext_resource type="Texture2D" uid="uid://daglxnotq0yu1" path="res://Assets/Lightning/lightning-6.png" id="8_2abkq"]
+[ext_resource type="Texture2D" uid="uid://dxx5mf383gbt3" path="res://Assets/Lightning/lightning-7.png" id="9_rw3oc"]
+[ext_resource type="Texture2D" uid="uid://cx2o1cp4dbeqx" path="res://Assets/Lightning/lightning-8.png" id="10_2xwrh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ob37o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f4kix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4r16o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s7lli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2exlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7fi8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2abkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rw3oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2xwrh")
+}],
+"loop": 0,
+"name": &"full",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f4kix")
+}],
+"loop": 0,
+"name": &"single-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4r16o")
+}],
+"loop": 1,
+"name": &"single-2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_2exlj")
+}],
+"loop": 1,
+"name": &"single-3",
+"speed": 5.0
+}]
 
 [node name="root" type="Node2D" unique_id=1292295819]
 
@@ -47,6 +111,71 @@ texture = ExtResource("2_hui8p")
 position = Vector2(6336, 324)
 scale = Vector2(2, 2.0000002)
 texture = ExtResource("2_hui8p")
+
+[node name="lightning-layer" type="Parallax2D" parent="." unique_id=1369003210]
+scroll_scale = Vector2(0, 0)
+
+[node name="lightning" type="Node2D" parent="lightning-layer" unique_id=130703678]
+
+[node name="1" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=2100164725]
+position = Vector2(245, 366)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
+
+[node name="2" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=1485140410]
+position = Vector2(846, 390)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
+
+[node name="3" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=588825646]
+position = Vector2(1075, 476)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
+
+[node name="4" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=805326941]
+position = Vector2(925, 468)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
+
+[node name="5" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=1030864151]
+position = Vector2(816, 449)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
+
+[node name="6" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=273344041]
+position = Vector2(113, 413)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
+
+[node name="7" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=499630154]
+position = Vector2(662, 412)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
+
+[node name="8" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=43117497]
+position = Vector2(392, 352)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
+
+[node name="9" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=14962419]
+position = Vector2(341, 419)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
+
+[node name="10" type="AnimatedSprite2D" parent="lightning-layer/lightning" unique_id=1221876158]
+position = Vector2(474, 398)
+sprite_frames = SubResource("SpriteFrames_ob37o")
+animation = &"single-1"
+frame_progress = 1.0
 
 [node name="clouds" type="Parallax2D" parent="." unique_id=1244930317]
 scroll_scale = Vector2(0.5, 0.5)

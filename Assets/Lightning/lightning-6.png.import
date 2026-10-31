@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnnwqq425rw1r"
-path="res://.godot/imported/layer-4.png-f08f046b45822765a19f0f30ccd54586.ctex"
+uid="uid://daglxnotq0yu1"
+path="res://.godot/imported/lightning-6.png-b26a4eb44bc77d1d5f791b03b94128ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Levels/Week-4/5/layer-4.png"
-dest_files=["res://.godot/imported/layer-4.png-f08f046b45822765a19f0f30ccd54586.ctex"]
+source_file="res://Assets/Lightning/lightning-6.png"
+dest_files=["res://.godot/imported/lightning-6.png-b26a4eb44bc77d1d5f791b03b94128ee.ctex"]
 
 [params]
 
