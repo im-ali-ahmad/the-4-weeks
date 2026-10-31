@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cgx53reeqxcm1"]
 
+[ext_resource type="Script" uid="uid://dk8wskvg4g53t" path="res://main.gd" id="1_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://dbkra6ssy577l" path="res://Assets/banner.png" id="1_glv2v"]
 [ext_resource type="Texture2D" uid="uid://dcq75s0qgsfu2" path="res://Assets/start-button.png" id="2_uu6xs"]
 [ext_resource type="Texture2D" uid="uid://ce4crdkqkqpat" path="res://Assets/start-button-hover.png" id="3_r0du0"]
@@ -19,6 +20,7 @@ region = Rect2(280, 192, 1422, 443)
 [node name="main" type="Control" unique_id=745961492]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_cm0pq")
 
 [node name="banner" type="Sprite2D" parent="." unique_id=313758032]
 position = Vector2(576.00006, 324.00003)
@@ -35,3 +37,5 @@ scale = Vector2(0.2, 0.2)
 texture_normal = SubResource("AtlasTexture_r0du0")
 texture_pressed = SubResource("AtlasTexture_lgr22")
 texture_hover = SubResource("AtlasTexture_trn2v")
+
+[connection signal="pressed" from="start-button" to="." method="_on_startbutton_pressed"]
