@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bhpe5nww2vlsg"]
 
+[ext_resource type="Script" uid="uid://bb8mikmae14eu" path="res://Levels/base_map.gd" id="1_kvlfg"]
+
 [sub_resource type="GDScript" id="GDScript_cfhxa"]
 script/source = "extends CharacterBody2D
 
@@ -24,6 +26,7 @@ func _physics_process(_delta: float) -> void:
 "
 
 [node name="base-map" type="Node2D" unique_id=1004147632]
+script = ExtResource("1_kvlfg")
 
 [node name="debug-body" type="CharacterBody2D" parent="." unique_id=513391861]
 script = SubResource("GDScript_cfhxa")

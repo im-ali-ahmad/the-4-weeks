@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dbkra6ssy577l" path="res://Assets/banner.png" id="1_glv2v"]
 [ext_resource type="Texture2D" uid="uid://dcq75s0qgsfu2" path="res://Assets/start-button.png" id="2_uu6xs"]
 [ext_resource type="Texture2D" uid="uid://ce4crdkqkqpat" path="res://Assets/start-button-hover.png" id="3_r0du0"]
+[ext_resource type="AudioStream" uid="uid://bf63javr0cos1" path="res://Assets/Musics/main-screen.wav" id="5_fos0i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0du0"]
 atlas = ExtResource("2_uu6xs")
@@ -22,10 +23,15 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_cm0pq")
 
-[node name="banner" type="Sprite2D" parent="." unique_id=313758032]
+[node name="background" type="Sprite2D" parent="." unique_id=313758032]
 position = Vector2(576.00006, 324.00003)
 scale = Vector2(0.5809379, 0.81715)
 texture = ExtResource("1_glv2v")
+
+[node name="fade" type="ColorRect" parent="." unique_id=625290138]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
 
 [node name="start-button" type="TextureButton" parent="." unique_id=609504204]
 layout_mode = 1
@@ -37,5 +43,9 @@ scale = Vector2(0.2, 0.2)
 texture_normal = SubResource("AtlasTexture_r0du0")
 texture_pressed = SubResource("AtlasTexture_lgr22")
 texture_hover = SubResource("AtlasTexture_trn2v")
+
+[node name="music" type="AudioStreamPlayer2D" parent="." unique_id=1129347328]
+stream = ExtResource("5_fos0i")
+autoplay = true
 
 [connection signal="pressed" from="start-button" to="." method="_on_startbutton_pressed"]
